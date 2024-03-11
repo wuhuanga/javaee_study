@@ -1,0 +1,51 @@
+1.equals 和tostring主要是重写
+
+1、Object中toString方法的作用是什么？存在的意义是什么？
+基本作用：返回对象的字符串形式。
+存在的意义：让子类重写，以便返回子类对象的内容。
+2、Object中equals方法的作用是什么？存在的意义是什么？
+基本作用：默认是比较两个对象的地址是否相等。
+存在的意义：让子类重写，以便用于比较对象的内容是否相同。
+
+3.clone()在object类用project保护只在其lang包下和子类使用
+clone重写要implement Cloneable
+Cloneable 标记类
+之后要加强转和抛出异常
+浅克隆：  拷贝出的新对象，与原对象中的数据一模一样（引用类型拷贝的只是地址)
+就是对象的地址不一样但是其成员指向的地址是一样的
+深拷贝：
+1.对象中基本类型的数据直接拷贝。
+2.对象中的字符串数据拷贝的还是地址。     就是数组之类的是和浅拷贝不一样的，重新创建了一个地址去储存
+3.对象中还包含的其他对象,不会拷贝地址,会创建新对象。
+
+objects.equals(a,b)更加安全比字符串的更安全
+objects.isNull()
+
+
+基本数据类型
+对应的     包装类(引用数据类型)
+byte    Byte
+short   Short
+int     Integer
+long    Long
+char    Character
+float   Float
+double  Double
+boolean Boolean
+
+自动装箱
+Integer a = 12;
+自动拆箱
+int b =a ;
+泛型和集合不适用基本类型值，支持类
+
+可以把基本类型的数据转换成字符串类型。
+public static String toString(double d)
+public String toString()
+·可以把字符串类型的数值转换成数值本身对应的数据类型。
+public static int parselnt(String s)
+public static Integer valueOf(String s)
+
+
+
+118
